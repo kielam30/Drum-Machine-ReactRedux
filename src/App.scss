@@ -1,0 +1,131 @@
+$colorGrey: hsl(0, 0, 75);
+$colorDarkGrey: hsl(0, 0, 20);
+$colorDarkerGrey: hsl(0,0,15);
+
+$borderRadius: 10px;
+
+$boxInnerShade: inset 3px 3px 3px;
+$ctrlInnerShade: inset 2px 2px 2px;
+$ctrlOuterShade: -2px 2px 2px;
+
+$fontUse: 'Courier New', Courier, monospace;
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: $colorGrey;
+  min-width: 550px;
+  min-height: 340px;
+}
+
+#drum-machine {
+  border: 5px solid $colorDarkerGrey;
+  position: absolute;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: $borderRadius;
+  background-color: $colorDarkGrey;
+  min-width: 550px;
+
+  p {
+    color: white;
+    opacity: 0.66;
+    margin: 0;
+    padding: 0;
+    min-width: 550px;
+  }
+}
+
+.drum-pads {
+  margin-top: 10px;
+  background-color: $colorDarkerGrey;
+  box-shadow: $boxInnerShade;
+  border-radius: $borderRadius;
+  display: grid;
+  padding: 5px;
+  grid-template: repeat(3, 20vh)/repeat(3, calc(100%/3))
+}
+
+.drum-pad {
+  font-family: $fontUse;
+  font-size: 30px;
+  font-weight: bold;
+  color: $colorDarkGrey;
+  opacity: .66;
+  border: none;
+  border-radius: $borderRadius;
+  margin: 3px;
+  cursor: pointer;
+  background-color: $colorGrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+
+.drum-pad:active, .activate-pad {
+  opacity: 1;
+  box-shadow: $boxInnerShade;
+  background-color: white;
+}
+
+.ctrl-area {
+  user-select: none;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, calc(100%/3));
+}
+
+#display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  opacity: 0.875;
+  border-radius: $borderRadius;
+  margin: 0 10px;
+  font-family: $fontUse;
+  font-size: 23px;
+  box-shadow: $ctrlInnerShade;
+}
+.volume-ctrl {
+  display: flex;
+  flex-direction: column-reverse;
+  margin: 0 10px;
+  color: white;
+  opacity: 0.75;
+  justify-content: center;
+}
+.volume-ctrl:active {
+  opacity: 0.95;
+}
+
+.toggler {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 5px;
+}
+
+.bank-btn {
+  box-shadow: $ctrlOuterShade;
+  background-color: whitesmoke;
+  opacity: 0.55;
+  padding: 15px;
+  border-radius: $borderRadius;
+  cursor: pointer;
+}
+
+.active {
+  opacity: 1;
+  box-shadow: $ctrlInnerShade;
+}
+
