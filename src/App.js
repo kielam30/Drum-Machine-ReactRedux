@@ -354,7 +354,7 @@ class DrumApp extends React.Component {
                             toggleBank2Text="Bank 2"
                         />
                     </div>
-                    <p>~~~~~~~~~~~~~~~~ Jackie Lam - 14 Jul 2021 ~~~~~~~~~~~~~~~~</p>
+                    <p>~~~~~~~~~~~~~~~~ Jackie Lam - 15 Jul 2021 ~~~~~~~~~~~~~~~~</p>
                 </div>
             </div>
         );
